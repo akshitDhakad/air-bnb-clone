@@ -1,0 +1,96 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.navbar{
+    padding: 20px;
+    margin: 0px;
+    /* background-color: white; */
+    border-bottom: 1px solid lightgrey;
+    
+}
+
+.searchfield{
+    width: 150px;
+    border-radius: 10px;
+    border:1px solid lightgray;
+    text-align: center;
+    color: lightgrey;
+    
+
+}
+
+
+.brandBtn{
+    color: red;
+    font-size: 1.5rem;
+}
+
+.box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonsBtn .links{
+    margin: 10px;
+    color: black;
+    padding: 5px;
+   
+}
+.buttonsBtn .links:hover{
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+    color: black;
+    box-shadow: 0px 0px 5px 0.5px black; 
+}
+
+
+.loginBtn{
+    border:  2px solid lightgray;
+    padding: 5px;
+    border-radius: 20px;
+    color: black;
+    
+    
+}
+.loginBtn:hover{
+    border:  2px solid lightgray;
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 0.5px black; 
+   
+}
+
+.searchBtn{
+    position: relative;
+}
+.searchBtn span{
+    z-index: 1;
+    right: 10px ;
+    position: absolute;
+    opacity: 60%;
+}
+
+
+
+
+
+@media (min-width: 596px) and (max-width:900px){
+    .box{
+        display: flex;
+        
+    }
+    .searchBtn{
+        margin-left: auto;
+    }
+}
+@media (max-width: 596px){
+    .box{
+        display: flex;
+        
+    }
+    .searchBtn{
+        display: none;
+    }
+}

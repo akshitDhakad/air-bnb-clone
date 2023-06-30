@@ -1,0 +1,33 @@
+.header{
+    display: flex;
+    justify-content: center;
+    width: min-content;
+    
+ 
+}
+.header button{
+    color: grey !important;
+    width: min-content;
+    font-size: x-small;
+    margin: 0px 10px;
+}
+
+button[active="true"]{
+    color: grey;
+    border-bottom: 2px solid black ;
+    
+    
+}
+.header:last-child{
+    border-radius: 5px;
+}
+
+
+.header button:hover{
+  
+    color: black !important;
+    border-bottom: 2px solid lightgrey ;
+    
+    
+
+}   

@@ -1,0 +1,104 @@
+.Home{
+    width: 100%;
+    overflow-y: hidden;
+    height: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+    border: none;
+    overflow-y: auto;
+}
+
+.card {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: min-content;
+    gap: 10px;
+    box-sizing: border-box;
+    border: none;
+
+}
+
+.carouselItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px; /* Adjust this value to your desired fixed height */
+  }
+  
+
+  .fixed-size-img {
+    width: 250px; /* Adjust this value to your desired fixed width */
+    height: 250px; /* Adjust this value to your desired fixed height */
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .details{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+  }
+ .details span{
+  font-size: 70%;
+ }
+ .details .item1{
+  grid-column: 1/2;
+  
+ }
+
+ .details .item2{
+  grid-column: 1/2;
+ }
+
+ .details .item3{
+  grid-column: 1/2;
+ }
+ .details .item4{
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin-left: auto;
+ }
+
+
+ /* .details .item4{
+  margin-left: auto;
+  grid-column: 2/3;
+  grid-row: 1/2;
+ } */
+
+  
+  @media (max-width: 768px){
+    .card {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 250px;
+      gap: 10px;
+      box-sizing: border-box;
+      border: none;
+      justify-items: center;
+  }
+    .fixed-size-img {
+      width: 300px; /* Adjust this value to your desired fixed width */
+      height: 250px; /* Adjust this value to your desired fixed height */
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  
+  @media (max-width: 545px){
+    .card {
+      display: grid !important;
+      grid-template-columns: 1fr ;
+      grid-template-rows: 250px;
+      gap: 10px;
+      box-sizing: border-box;
+      border: none;
+      justify-items: center;
+  }
+    .fixed-size-img {
+      width: 450px; /* Adjust this value to your desired fixed width */
+      height: 250px; /* Adjust this value to your desired fixed height */
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }

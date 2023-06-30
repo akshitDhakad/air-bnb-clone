@@ -1,17 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import {
+  Route,
+  Routes
+} from "react-router-dom";
+import AddItem from "./Dashboard/AddItem";
+import GetItems from "./Dashboard/GetITems"
+import UpItems from "./Dashboard/UpITems"
+import Delete from "./Dashboard/Delete";
+import Page404 from "./Components/Page404";
+import DasNav from "./Dashboard/DasNav"
+// import Home from "./Components/Home";
+// import Header from "./Components/Header";
+import "./App.css"
+import Login from './Components/Login';
+import Home from './Components/Home';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <BrowserRouter>
+    {/* <App/> */}
+    <Routes>
+            <Route path="/" element={<App/>}/>
+            <Route path="/Admin" element={<DasNav/>}/>
+            <Route path="/Login" element={<Login/>}/>
+            <Route path="/Admin/getDate" element={<GetItems/>}/>
+            <Route path="/Admin/AddDate" element={<AddItem/>}/>
+            <Route path="/Admin/upDate/:id" element={<UpItems/>}/>
+            <Route path="/Admin/delete" element={<Delete/>}/>
+            <Route path="/getDatabase/:type" element={<Home/>}/>
+            <Route path="*" element={<Page404/>}/>
+          
+        </Routes>
+  </BrowserRouter>
+
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

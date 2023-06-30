@@ -1,0 +1,139 @@
+.dasNav{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(17, 17, 40);
+    padding: 10px;
+    color: white;
+    align-items: center;
+}
+
+.databaseBrand{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+}
+
+
+
+.dasnar-links>.links{
+    margin: 0px 10px;
+    text-decoration: none;
+    color: white;
+    outline: 1px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    
+ 
+}
+.dasnar-links>.links:hover{
+    margin: 0px 10px;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    outline: 1px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    
+ 
+}
+
+
+
+/* *********************** table contetn **************************** */
+
+table {
+    width:250px;
+    table-layout:fixed;
+}
+table tr {
+    height:1em;
+}
+
+td { overflow:hidden!important;
+    white-space:nowrap!important;
+    text-overflow: ellipsis!important;
+} 
+
+
+/* ******************** Add-Items **************************** */
+
+.AddPage{
+    color: white;
+    background-color: #001C30;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.AddItemBox{
+    margin: 10px auto;
+    width: 50%;
+    display: grid;
+    gap: 20px ;
+    grid-template-columns: 1fr 1fr;
+   
+}
+
+.AddItemBox input{
+    padding: 8px;
+    border: 1px solid white;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+.item1{
+    grid-column: 1/-1;
+}
+
+.item2{
+    grid-column: 1/-1;
+}
+.item5{
+    grid-column: 1/-1;
+}
+
+.item10{
+    background-color: white;
+    text-align: center;
+    grid-column: 1/-1;
+    padding: 8px;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: #001C30;
+}
+.item10:hover{
+    background-color: #001C30;
+    text-align: center;
+    grid-column: 1/-1;
+    padding: 8px;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+}
+
+@media (max-width: 568px){
+    .AddPage{
+        color: white;
+        background-color: #001C30;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: min-content;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+
+    .AddItemBox{
+        width: 80%;
+        margin: 10px auto;
+        
+        display: flex;
+        gap: 20px ;
+        flex-direction: column;
+        
+       
+    }
+
+}
