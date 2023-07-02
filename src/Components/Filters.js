@@ -2,7 +2,7 @@ import React from 'react'
 
 function Filters() {
   return (
-    <div></div>
+    <div>this is filter page</div>
   )
 }
 

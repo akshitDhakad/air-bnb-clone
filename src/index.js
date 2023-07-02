@@ -17,7 +17,8 @@ import DasNav from "./Dashboard/DasNav"
 import "./App.css"
 import Login from './Components/Login';
 import Home from './Components/Home';
-
+import  CardDetail from "./Components/CardDetail"
+import Filters from './Components/Filters';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -27,11 +28,13 @@ root.render(
             <Route path="/" element={<App/>}/>
             <Route path="/Admin" element={<DasNav/>}/>
             <Route path="/Login" element={<Login/>}/>
+            <Route path="/CardDetails" element={<CardDetail/>}/>
             <Route path="/Admin/getDate" element={<GetItems/>}/>
             <Route path="/Admin/AddDate" element={<AddItem/>}/>
             <Route path="/Admin/upDate/:id" element={<UpItems/>}/>
             <Route path="/Admin/delete" element={<Delete/>}/>
             <Route path="/getDatabase/:type" element={<Home/>}/>
+            <Route path="/Filter/:type" element={<Filters/>}/>
             <Route path="*" element={<Page404/>}/>
           
         </Routes>

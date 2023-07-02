@@ -1,0 +1,81 @@
+.CardDetail{
+    padding: 15px;
+   
+}
+
+wrapper {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+  }
+  
+  .image-gallery {
+    
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+
+  @media (max-width: 768px){
+    .image-gallery {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column-reverse;
+      }
+  }
+  
+  .primary{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .thumbnails {
+    
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: 768px){
+    .thumbnails {
+        display: flex;
+        flex-direction: row;
+        
+      }
+  }
+  
+  .thumbnails {
+    width: 300px;
+    border-radius: 10px;
+  
+  }
+  
+  .primary {
+    width: 600px;
+    height: 400px;
+    background-color: #cccccc;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  
+  .thumbnail:hover .thumbnail-image, .selected .thumbnail-image {
+    border: 4px solid blue;
+
+  }
+  
+  .thumbnail-image {
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 4px solid transparent;
+  }
+
+.CardDetail span{
+  margin: 10px;
+}

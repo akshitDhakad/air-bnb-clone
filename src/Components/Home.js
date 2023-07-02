@@ -36,19 +36,6 @@ function Home() {
       
   },[])
 
-
-//  console.log(data)
-
-
-
-
-// ************************************************* old code example ************************************************
-  //  const[data ,setData] = useState([])
-  // useEffect(() => {
-  //   fetch("http://localhost:5000/getDatabase")
-  // .then((response)=>response.json())
-  // .then((data)=>{setData(data)})
-  // },[])
   
   return (
     <div className='Home'>
@@ -56,7 +43,7 @@ function Home() {
         <div className='card '>
           {
             (data).map((data)=>
-            <Card City={data.City} Country={data.Country} Price={data.Price} Rating={data.Rating} Img1={data.Img1} Img2={data.Img2} Img3={data.Img3} Img4={data.Img4}/>
+            <Card Id={data._id} City={data.City} Country={data.Country} Price={data.Price} Rating={data.Rating} Img1={data.Img1} Img2={data.Img2} Img3={data.Img3} Img4={data.Img4}/>
           )
           }
         </div>

@@ -1,10 +1,12 @@
 import Carousel from 'react-bootstrap/Carousel';
 import "./Home.css"
 import React,{useState} from 'react';
+import {Link} from "react-router-dom"
 function Card(props) {
     const [hide ,setHide] = useState(false)
   return (
     <div>
+    <Link to={`/cardDetails?id=${props.Id}`}>
     <Carousel onMouseEnter={()=>setHide(true)} onMouseLeave={()=>setHide(false)} interval={null} indicators={false} controls={hide}>
       <Carousel.Item>
         <img
@@ -39,6 +41,7 @@ function Card(props) {
       </Carousel.Item>
       
     </Carousel>
+    </Link>
     <div className='details'>
       <span className='item1'><b>{props.City}</b></span>
       <span className='item2'>{props.Country}</span>
@@ -46,6 +49,7 @@ function Card(props) {
       <span className='item4'><b>★</b>{props.Rating}</span>
       
     </div>
+    
     </div>
   );
 }

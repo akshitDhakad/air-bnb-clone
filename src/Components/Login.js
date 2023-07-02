@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
 import "./Login.css"
+import SigupForm from './SigupForm'
+import LoginForm from './LoginForm'
 
 function Login() {
   var [loggin ,setloggin]= useState(true)
 
 
+
+// sigup form data handler
   return (
     <div className='loggin-signup-page'>
       <div className="form-container">
@@ -20,69 +24,9 @@ function Login() {
       {
         loggin?<LoginForm data={setloggin} toggle={loggin}/>:<SigupForm data={setloggin} toggle={loggin}/>
       }
-      
-
-     
     </div> 
     </div>
   )
 }
-
-
-
-
-function LoginForm(props){
-  return(
-    <form className="login-form">
-    <div>
-      <input type="text" id="username" placeholder="Username" required />
-    </div>
-    <div>
-      <input
-        type="password"
-        id="password"
-        placeholder="Password"
-        required
-      />
-    </div>
-    <button className='loginBtn' type="submit">Login</button>
-    <p className='toggleBtn' type="button" onClick={()=>props.data(!(props.toggle))}>Not registered? Click here to register</p>
-   
-  </form>
-  )
-
-}
-
-function SigupForm(props){
-  return(
-    <form className="register-form">
- 
-    <div>
-      <input type="text" id="fullname" placeholder="Full Name" required />
-    </div>
-    <div>
-      <input type="email" id="email" placeholder="Email" required />
-    </div>
-    <div>
-      <input type="text" id="username" placeholder="Username" required />
-    </div>
-    <div>
-      <input
-        type="password"
-        id="password"
-        placeholder="Password"
-        required
-      />
-    </div>
-    <button className='loginBtn' type="submit">Register</button>
-    <p className='toggleBtn' type="button" onClick={()=>props.data(!(props.toggle))}>Already registered? Click here to login</p>
-  </form>
-
-  )
-
-}
-
-
-
 
 export default Login
